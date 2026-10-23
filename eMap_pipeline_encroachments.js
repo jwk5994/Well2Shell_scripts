@@ -98,6 +98,6 @@ function toCsv(data) {
   }
 
   const csv = toCsv(results);
-  fs.writeFileSync('OG_ESCGP_geolocations.csv', csv);
-  console.log(`Finished. Saved ${results.length} records to OG_ESCGP_geolocations.csv`);
+  fs.writeFileSync('ALL_ESCGP_geolocations.csv', csv);
+  console.log(`Finished. Saved ${results.length} records to ALL_ESCGP_geolocations.csv`);
 })();
