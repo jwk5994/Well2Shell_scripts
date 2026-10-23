@@ -2,7 +2,7 @@ const axios = require('axios');
 const fs = require('fs');
 const baseURL = 'https://gis.dep.pa.gov/depadv/rest/services/eMapPA/eMapPA/MapServer';
 
-const searchTerms = ["water", "twl", "temp"];
+const searchTerms = ["water"];
 
 function toCsv(data) {
   if (!data.length) return '';
@@ -98,6 +98,6 @@ function toCsv(data) {
   }
 
   const csv = toCsv(results);
-  fs.writeFileSync('results_water_twl_paginated.csv', csv);
-  console.log(`Finished. Saved ${results.length} records to results_water_twl_paginated.csv`);
+  fs.writeFileSync('Output_Name_Here.csv', csv);
+  console.log(`Finished. Saved ${results.length} records to Output_Name_Here.csv`);
 })();
